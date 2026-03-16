@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>I'm Sorry</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button id="mute">🔊</button>
+
+
+<!-- PAGE 1 -->
+<section class="page active" id="page1">
+
+<div class="main-card">
+
+<div class="bear-glow">
+<img src="images/bear-walk.gif" class="bear">
+</div>
+
+<h2>It's late night... I've been walking for hours...</h2>
+
+<p>I'm holding something heavy... not in hands, but in heart...</p>
+
+<button onclick="nextPage()">Let me talk...</button>
+
+</div>
+
+</section>
+
+
+
+<!-- PAGE 2 -->
+
+<section class="page" id="page2">
+
+<div class="message-card">
+
+<h1>My Sorry Letter to You...</h1>
+
+<div class="bear-glow">
+<img src="images/bear-cry.gif" class="bear">
+</div>
+
+<p>I've been sitting here for hours trying to find the right words...</p>
+
+<button onclick="nextPage()">Continue reading...</button>
+
+</div>
+
+</section>
+
+
+
+<!-- PAGE 3 -->
+
+<section class="page" id="page3">
+
+<div class="main-card">
+
+<div class="bear-glow">
+<img src="images/bear-sorry.gif" class="bear">
+</div>
+
+<h2>You didn't deserve that...</h2>
+
+<button onclick="nextPage()">Read my letter...</button>
+
+</div>
+
+</section>
+
+
+
+<!-- PAGE 4 MEMORIES -->
+
+<section class="page" id="page4">
+
+<h2>I've been staring at these all night...</h2>
+
+<div class="cards">
+
+<img src="images/memory1.jpg">
+<img src="images/memory2.jpg">
+<img src="images/memory3.jpg">
+
+</div>
+
+<p>
+You're so beautiful, but I still hurt you... I'm so sorry.
+</p>
+
+<p>
+I promise to do better and treat you the way you deserve.
+</p>
+
+<button onclick="nextPage()">I need you...</button>
+
+</section>
+
+
+
+<!-- PAGE 5 HUG -->
+
+<section class="page" id="page5">
+
+<div class="bear-glow">
+<img src="images/bear-hug.gif" class="bear">
+</div>
+
+<h2>I don't need anything fancy right now...</h2>
+
+<p>Just your arms around me.</p>
+
+<button onclick="sendHug()">Send a hug</button>
+
+</section>
+
+
+
+<!-- PAGE 6 GIFT -->
+
+<section class="page" id="page6">
+
+<h2>I have something special for you...</h2>
+
+<img src="images/gift.gif" class="gift">
+
+<button onclick="nextPage()">Open the gift</button>
+
+</section>
+
+
+
+<!-- PAGE 7 FINAL -->
+
+<section class="page" id="page7">
+
+<div class="bear-glow">
+<img src="images/bear-flower.gif" class="bear">
+</div>
+
+<h2>This flower will never wilt</h2>
+
+<p>Just like how much you mean to me.</p>
+
+<div id="hearts"></div>
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
