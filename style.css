@@ -104,6 +104,7 @@ animation:twinkle2 6s ease-in-out infinite alternate;
 }
 
 
+
 /* ============================= */
 /* PAGE LAYOUT */
 /* ============================= */
@@ -158,29 +159,37 @@ transform:translateY(0);
 
 .bear{
 width:200px;
+display:block;
+background:transparent;
+border:none;
+
+/* soft floating shadow */
+filter:
+drop-shadow(0 20px 35px rgba(0,0,0,0.45))
+drop-shadow(0 0 30px rgba(140,110,255,0.35));
+
+border-radius:18px;
 }
 
 
 
 /* ============================= */
-/* PURPLE SHADOW FOR GIF */
+/* BEAR CONTAINER */
 /* ============================= */
 
 .bear-glow{
 
-padding:10px;
+display:inline-flex;
+justify-content:center;
+align-items:center;
 
-background:none;
+padding:8px;
 
-border-radius:0;
-
-box-shadow:
-0 0 40px rgba(120,80,255,.35),
-0 0 80px rgba(120,80,255,.25);
+background:transparent;
+border:none;
+box-shadow:none;
 
 margin-bottom:20px;
-
-display:inline-block;
 
 }
 
@@ -325,12 +334,10 @@ max-width:520px;
 #mute{
 
 position:fixed;
-
 top:20px;
 right:20px;
 
 background:transparent !important;
-
 border:none;
 
 font-size:22px;
@@ -358,7 +365,6 @@ z-index:1000;
 .heart{
 
 position:absolute;
-
 font-size:18px;
 
 animation:float 4s linear forwards;

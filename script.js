@@ -4,6 +4,7 @@ const music = document.getElementById("music");
 const mute = document.getElementById("mute");
 
 let musicStarted = false;
+let hugScheduled = false;   // prevents multiple page transitions
 
 
 /* ============================= */
@@ -18,19 +19,16 @@ music.play();
 musicStarted = true;
 }
 
-// remove current page safely
 let currentPage = document.getElementById("page"+current);
 
 if(currentPage){
 currentPage.classList.remove("active");
 }
 
-// go to next page
 current++;
 
 let next = document.getElementById("page"+current);
 
-// only activate if page exists
 if(next){
 next.classList.add("active");
 }
@@ -46,16 +44,12 @@ next.classList.add("active");
 mute.addEventListener("click", function(){
 
 if(music.paused){
-
 music.play();
 mute.textContent = "🔊";
 musicStarted = true;
-
 }else{
-
 music.pause();
 mute.textContent = "🔇";
-
 }
 
 });
@@ -68,6 +62,7 @@ mute.textContent = "🔇";
 
 function sendHug(){
 
+// hearts can always appear
 for(let i=0;i<30;i++){
 
 let heart = document.createElement("div");
@@ -77,7 +72,6 @@ heart.innerHTML = "💗";
 heart.style.position = "absolute";
 heart.style.left = Math.random()*100 + "%";
 heart.style.bottom = "0";
-
 heart.style.fontSize = "30px";
 
 document.body.appendChild(heart);
@@ -87,17 +81,20 @@ heart.animate(
 {transform:"translateY(0)",opacity:1},
 {transform:"translateY(-700px)",opacity:0}
 ],
-{
-duration:3000
-}
+{duration:3000}
 );
 
 setTimeout(()=>heart.remove(),3000);
-
 }
 
-// move to next page after animation
-setTimeout(()=>nextPage(),2000);
+// schedule next page only once
+if(!hugScheduled){
+hugScheduled = true;
+
+setTimeout(()=>{
+nextPage();
+},2000);
+}
 
 }
 
@@ -127,14 +124,11 @@ el.animate(
 {transform:"translateY(0)",opacity:1},
 {transform:"translateY(-700px)",opacity:0}
 ],
-{
-duration:6000
-}
+{duration:6000}
 );
 
 setTimeout(()=>el.remove(),6000);
 
 }
 
-// continuous sparkle effect
 setInterval(sparkle,1200);
