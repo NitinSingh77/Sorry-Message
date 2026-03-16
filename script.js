@@ -1,3 +1,13 @@
+window.onload = function(){
+current = 1;
+
+document.querySelectorAll(".page").forEach(p=>{
+p.classList.remove("active");
+});
+
+document.getElementById("page1").classList.add("active");
+};
+
 let current = 1;
 
 const music = document.getElementById("music");
@@ -31,6 +41,10 @@ let next = document.getElementById("page"+current);
 
 if(next){
 next.classList.add("active");
+
+if(current === 7){
+celebration();
+}
 }
 
 }
@@ -132,3 +146,39 @@ setTimeout(()=>el.remove(),6000);
 }
 
 setInterval(sparkle,1200);
+
+/* ============================= */
+/* FINAL PAGE ROSES */
+/* ============================= */
+
+function celebration(){
+
+let icons = ["🌹","💗"];
+
+for(let i=0;i<25;i++){
+
+let el = document.createElement("div");
+
+el.innerHTML = icons[Math.floor(Math.random()*icons.length)];
+
+el.style.position="fixed";
+el.style.left=Math.random()*100+"%";
+el.style.top="100%";
+el.style.fontSize="26px";
+el.style.pointerEvents="none";
+
+document.body.appendChild(el);
+
+el.animate(
+[
+{transform:"translateY(0)",opacity:1},
+{transform:"translateY(-900px)",opacity:0}
+],
+{duration:4000}
+);
+
+setTimeout(()=>el.remove(),4000);
+
+}
+
+}

@@ -124,6 +124,8 @@ padding:20px;
 
 z-index:1;
 
+overflow-y:auto;
+
 }
 
 .page.active{
@@ -139,14 +141,14 @@ animation:fade .8s ease;
 
 @keyframes fade{
 
-from{
+0%{
 opacity:0;
-transform:translateY(15px);
+transform:translateY(40px) scale(.96);
 }
 
-to{
+100%{
 opacity:1;
-transform:translateY(0);
+transform:translateY(0) scale(1);
 }
 
 }
@@ -326,6 +328,45 @@ max-width:520px;
 }
 
 
+/* ============================= */
+/* BEAUTIFUL TYPOGRAPHY */
+/* ============================= */
+
+h1,h2{
+font-family:'Great Vibes', cursive;
+font-size:36px;
+color:#ffb6d9;
+letter-spacing:1px;
+text-shadow:0 0 12px rgba(255,170,220,0.4);
+}
+
+p{
+font-family:'Poppins', sans-serif;
+font-size:17px;
+line-height:1.7;
+color:#e9d7f7;
+}
+
+/* special emotional text */
+
+p:last-of-type{
+color:#ff9ed3;
+font-weight:500;
+font-size:18px;
+}
+
+/* ============================= */
+/* WHITE TEXT ABOVE BUTTONS */
+/* ============================= */
+
+.page:not(#page4) p{
+color:#ffffff;
+font-weight:400;
+}
+
+.page:not(#page4) p:last-of-type{
+color:#ffffff;
+}
 
 /* ============================= */
 /* SOUND BUTTON */
@@ -450,4 +491,16 @@ padding:35px 20px;
 width:160px;
 }
 
+}
+
+/* ============================= */
+/* FIX MEMORY PAGE BUTTON */
+/* ============================= */
+#page4 p{
+max-width:650px;
+margin-top:15px;
+}
+
+#page4 button{
+margin-top:30px;
 }
