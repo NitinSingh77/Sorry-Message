@@ -384,3 +384,140 @@ opacity:0;
 }
 
 }
+
+/* ============================= */
+/* MOBILE RESPONSIVE DESIGN */
+/* ============================= */
+
+@media (max-width: 768px){
+
+body{
+overflow-y:auto;
+}
+
+/* general text scaling */
+
+h1{
+font-size:26px;
+}
+
+h2{
+font-size:22px;
+}
+
+p{
+font-size:16px;
+padding:0 10px;
+}
+
+/* pages fit phone screen better */
+
+.page{
+padding:30px 15px;
+height:auto;
+min-height:100vh;
+}
+
+/* teddy size */
+
+.bear{
+width:160px;
+}
+
+/* buttons */
+
+button{
+padding:14px 30px;
+font-size:16px;
+}
+
+/* ============================= */
+/* MEMORY PAGE MOBILE */
+/* ============================= */
+
+.cards{
+
+display:flex;
+overflow-x:auto;
+gap:16px;
+padding:15px;
+
+scroll-snap-type:x mandatory;
+
+}
+
+/* scroll bar style */
+
+.cards::-webkit-scrollbar{
+height:6px;
+}
+
+.cards::-webkit-scrollbar-thumb{
+background:#b08cff;
+border-radius:10px;
+}
+
+/* image cards */
+
+.cards img{
+
+width:180px;
+flex-shrink:0;
+
+border-radius:18px;
+
+scroll-snap-align:center;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.5),
+0 0 20px rgba(160,120,255,.25);
+
+}
+
+/* white glowing frame behind cards */
+
+.cards{
+
+background:rgba(255,255,255,0.05);
+
+border-radius:20px;
+
+padding:20px;
+
+border:1px solid rgba(255,255,255,0.08);
+
+box-shadow:
+0 0 30px rgba(160,120,255,.25);
+
+margin-top:20px;
+
+}
+
+/* hearts and sparkles background effect */
+
+.cards::before{
+
+content:"✨ 💗 ✨";
+
+position:absolute;
+
+opacity:.2;
+
+font-size:40px;
+
+pointer-events:none;
+
+}
+
+/* main card tighter on mobile */
+
+.main-card{
+padding:30px 20px;
+max-width:90%;
+}
+
+.message-card{
+max-width:90%;
+}
+
+}
