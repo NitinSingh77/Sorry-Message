@@ -7,7 +7,7 @@ margin:0;
 font-family: Arial, sans-serif;
 color:white;
 text-align:center;
-overflow:hidden;
+overflow-x:hidden;
 background:#07142b;
 }
 
@@ -165,7 +165,6 @@ display:block;
 background:transparent;
 border:none;
 
-/* soft floating shadow */
 filter:
 drop-shadow(0 20px 35px rgba(0,0,0,0.45))
 drop-shadow(0 0 30px rgba(140,110,255,0.35));
@@ -314,22 +313,7 @@ margin-top:15px;
 
 
 /* ============================= */
-/* TEXT STYLE */
-/* ============================= */
-
-h1,h2{
-color:#f0b6d9;
-font-weight:500;
-}
-
-p{
-color:#d6d6e7;
-max-width:520px;
-}
-
-
-/* ============================= */
-/* BEAUTIFUL TYPOGRAPHY */
+/* TYPOGRAPHY */
 /* ============================= */
 
 h1,h2{
@@ -345,9 +329,10 @@ font-family:'Poppins', sans-serif;
 font-size:17px;
 line-height:1.7;
 color:#e9d7f7;
+max-width:520px;
 }
 
-/* special emotional text */
+/* emotional pink text */
 
 p:last-of-type{
 color:#ff9ed3;
@@ -355,18 +340,30 @@ font-weight:500;
 font-size:18px;
 }
 
+
+
 /* ============================= */
-/* WHITE TEXT ABOVE BUTTONS */
+/* WHITE TEXT ON OTHER PAGES */
 /* ============================= */
 
 .page:not(#page4) p{
 color:#ffffff;
-font-weight:400;
 }
 
 .page:not(#page4) p:last-of-type{
 color:#ffffff;
 }
+
+
+
+/* Fix page 3 paragraph */
+
+#page3 p,
+#page3 p:last-of-type{
+color:white !important;
+}
+
+
 
 /* ============================= */
 /* SOUND BUTTON */
@@ -426,6 +423,33 @@ opacity:0;
 
 }
 
+
+
+/* ============================= */
+/* MEMORY PAGE FIX */
+/* ============================= */
+
+#page4.page{
+height:auto;
+min-height:100vh;
+justify-content:flex-start;
+padding-top:80px;
+padding-bottom:140px;
+overflow-y:auto;
+}
+
+#page4 p{
+max-width:650px;
+margin-top:15px;
+}
+
+#page4 button{
+margin-top:40px;
+margin-bottom:80px;
+}
+
+
+
 /* ============================= */
 /* MOBILE RESPONSIVE */
 /* ============================= */
@@ -436,8 +460,6 @@ body{
 overflow-y:auto;
 }
 
-/* scale text */
-
 h2{
 font-size:24px;
 }
@@ -447,8 +469,6 @@ font-size:16px;
 padding:0 10px;
 }
 
-/* cards on phone */
-
 .cards{
 flex-direction:column;
 align-items:center;
@@ -457,8 +477,6 @@ overflow-y:auto;
 padding:20px 0;
 max-height:55vh;
 }
-
-/* memory image frame */
 
 .cards img{
 width:80%;
@@ -472,35 +490,13 @@ box-shadow:
 0 0 20px rgba(160,120,255,0.3);
 }
 
-/* page spacing */
-
-#page4{
-padding-top:40px;
-}
-
-/* main card shrink */
-
 .main-card{
 max-width:90%;
 padding:35px 20px;
 }
 
-/* teddy resize */
-
 .bear{
 width:160px;
 }
 
-}
-
-/* ============================= */
-/* FIX MEMORY PAGE BUTTON */
-/* ============================= */
-#page4 p{
-max-width:650px;
-margin-top:15px;
-}
-
-#page4 button{
-margin-top:30px;
 }
